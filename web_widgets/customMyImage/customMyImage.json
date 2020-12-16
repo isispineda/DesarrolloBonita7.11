@@ -1,0 +1,34 @@
+{
+  "designerVersion" : "1.10.50",
+  "id" : "customMyImage",
+  "name" : "MyImage",
+  "lastUpdate" : 1595455218572,
+  "template" : "@customMyImage.tpl.html",
+  "controller" : "@customMyImage.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Value",
+      "name" : "Src",
+      "type" : "text",
+      "defaultValue" : "assets/img/assetname.png",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Value",
+      "name" : "Description",
+      "type" : "text",
+      "choiceValues" : [
+        "RebeccaPurple",
+        "Chartreuse",
+        "Tomato",
+        "DeepSkyBlue"
+      ],
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

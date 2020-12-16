@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="aplicacionSCGusuario" version="1.0" profile="User" homePage="home" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
+        <displayName>SCG</displayName>
+        <description></description>
+        <iconPath></iconPath>
+        <applicationPages>
+            <applicationPage customPage="custompage_HomeCustomPage" token="home"/>
+            <applicationPage customPage="custompage_tasklist" token="tareasUsuario"/>
+            <applicationPage customPage="custompage_PtoIngresoPuestoFronterizo" token="ingresoflujo"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu>
+                <displayName>Procesos</displayName>
+                <applicationMenus>
+                    <applicationMenu applicationPage="ingresoflujo">
+                        <displayName>Ingreso de Flujo</displayName>
+                    </applicationMenu>
+                </applicationMenus>
+            </applicationMenu>
+            <applicationMenu applicationPage="tareasUsuario">
+                <displayName>Tareas de Usuario</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+    <application token="aplicacionSCGjefe" version="1.0" profile="User" homePage="jefehome" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
+        <displayName>SCG</displayName>
+        <description></description>
+        <iconPath></iconPath>
+        <applicationPages>
+            <applicationPage customPage="custompage_HomeCustomPage" token="jefehome"/>
+            <applicationPage customPage="custompage_EditarAreaPage" token="jefearea"/>
+            <applicationPage customPage="custompage_EditarFronteraPage" token="jefefrontera"/>
+            <applicationPage customPage="custompage_EditarInstitucionPage" token="jefeinstitucion"/>
+            <applicationPage customPage="custompage_EditarProcesoPage" token="jefeproceso"/>
+            <applicationPage customPage="custompage_EditarPuntoControlPage" token="jefepuntoControl"/>
+            <applicationPage customPage="custompage_Cancelaciones" token="jefecancelaciones"/>
+            <applicationPage customPage="custompage_Retornar" token="jeferetornar"/>
+            <applicationPage customPage="custompage_ConsultaMT" token="jefeconsulta"/>
+            <applicationPage customPage="custompage_Incidencia" token="jefeincidencia"/>
+            <applicationPage customPage="custompage_SalidaManual" token="jefesalidamanual"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu>
+                <displayName>Mantenimientos</displayName>
+                <applicationMenus>
+                    <applicationMenu applicationPage="jefearea">
+                        <displayName>Area</displayName>
+                    </applicationMenu>
+                    <applicationMenu applicationPage="jefefrontera">
+                        <displayName>Frontera</displayName>
+                    </applicationMenu>
+                    <applicationMenu applicationPage="jefeinstitucion">
+                        <displayName>Institucion</displayName>
+                    </applicationMenu>
+                    <applicationMenu applicationPage="jefeproceso">
+                        <displayName>Proceso</displayName>
+                    </applicationMenu>
+                    <applicationMenu applicationPage="jefepuntoControl">
+                        <displayName>PuntoControl</displayName>
+                    </applicationMenu>
+                </applicationMenus>
+            </applicationMenu>
+            <applicationMenu applicationPage="jefecancelaciones">
+                <displayName>Cancelacion de flujos</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="jeferetornar">
+                <displayName>Retornar Flujos</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="jefeconsulta">
+                <displayName>Consulta</displayName>
+            </applicationMenu>
+             <applicationMenu applicationPage="jefeincidencia">
+                <displayName>Incidencia</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="jefesalidamanual">
+                <displayName>Salida Manual</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

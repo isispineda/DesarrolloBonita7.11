@@ -1,0 +1,3 @@
+*.db.trace.db
+*.db.mv.db
+*.db.lock.db
