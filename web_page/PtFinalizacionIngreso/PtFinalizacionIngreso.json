@@ -2,7 +2,7 @@
   "designerVersion" : "1.11.52",
   "id" : "PtFinalizacionIngreso",
   "name" : "PtFinalizacionIngreso",
-  "lastUpdate" : 1602805913144,
+  "lastUpdate" : 1610477687974,
   "rows" : [
     [
       {
@@ -665,7 +665,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" ></i>  MEDIO DE TRANSPORTE</div>"
+                          "value" : "<div class=\"alert alert-info\" translate></i>  Medio de Transporte.</div>"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -1098,7 +1098,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" ></i> MOTORISTA</div>"
+                          "value" : "<div class=\"alert alert-info\" translate></i> Motorista.</div>"
                         },
                         "alignment" : {
                           "type" : "constant",

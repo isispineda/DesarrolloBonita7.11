@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.10.50",
   "id" : "cancelarFlujoForm",
   "name" : "cancelarFlujoForm",
-  "lastUpdate" : 1604612259387,
+  "lastUpdate" : 1610477884089,
   "rows" : [
     [
       {
@@ -446,7 +446,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "PLACA"
+                          "value" : "Placa"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -518,7 +518,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "PLACA TRASERA"
+                          "value" : "Placa Trasera"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -592,7 +592,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "CONTENEDOR"
+                          "value" : "Contenedor"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -664,7 +664,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "FECHA DE ENTRADA"
+                          "value" : "Fecha de Entrada"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -908,7 +908,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "DOCUMENTO"
+                          "value" : "Documento"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -980,7 +980,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "PAÍS SEGÚN DOCUMENTO"
+                          "value" : "País Segun Documento"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1054,7 +1054,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "NOMBRE"
+                          "value" : "Nombre"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1126,7 +1126,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "APELLIDO"
+                          "value" : "Apellido"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1200,7 +1200,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "MOTIVO DE CANCELACIÓN"
+                          "value" : "Motivo de Cancelación"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1244,7 +1244,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "CANCELAR FLUJO"
+                    "value" : "Cancelar Flujo"
                   },
                   "alignment" : {
                     "type" : "constant",

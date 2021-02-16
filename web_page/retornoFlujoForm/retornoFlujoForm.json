@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.10.50",
   "id" : "retornoFlujoForm",
   "name" : "retornoFlujoForm",
-  "lastUpdate" : 1605119182587,
+  "lastUpdate" : 1610477998407,
   "rows" : [
     [
       {
@@ -453,7 +453,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "PLACA"
+                          "value" : "Placa"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -525,7 +525,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "PLACA TRASERA"
+                          "value" : "Placa  trasera"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -599,7 +599,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "CONTENEDOR"
+                          "value" : "Contenedor"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -671,7 +671,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "FECHA DE ENTRADA"
+                          "value" : "Fecha de Entrada"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -915,7 +915,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "DOCUMENTO"
+                          "value" : "Documento"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -987,7 +987,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "PAÍS SEGÚN DOCUMENTO"
+                          "value" : "País Segun Documento"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1061,7 +1061,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "NOMBRE"
+                          "value" : "Nombre"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1133,7 +1133,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "APELLIDO"
+                          "value" : "Apellido"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1207,7 +1207,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "MOTIVO DE RETORNO"
+                          "value" : "Motivo de Retorno"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -1300,7 +1300,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "RETORNAR FLUJO"
+                    "value" : "Retornar Flujo"
                   },
                   "alignment" : {
                     "type" : "constant",

@@ -2,7 +2,7 @@
   "designerVersion" : "1.11.52",
   "id" : "newConfirmacionDatos",
   "name" : "newConfirmacionDatos",
-  "lastUpdate" : 1604609588986,
+  "lastUpdate" : 1610477401189,
   "rows" : [
     [
       {
@@ -10,7 +10,20 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
         "reference" : "73e348c2-27c0-4c60-9841-877775ad51dd",
         "hasValidationError" : false,
         "id" : "pbContainer",
@@ -90,6 +103,18 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "4183905a-5d85-4ab1-a645-457b73b0f3c1",
@@ -107,7 +132,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "1e05947f-6104-4d37-bc75-8798970ffcac",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -137,7 +171,7 @@
                     "value" : false
                   },
                   "cssClasses" : {
-                    "type" : "constant",
+                    "type" : "expression",
                     "value" : ""
                   },
                   "dimension" : {
@@ -156,37 +190,21 @@
                         "xs" : 12
                       },
                       "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!flujo.persistenceId"
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Flujo"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{flujo.persistenceId}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
+                          "value" : "Default label"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -199,24 +217,80 @@
                         "allowHTML" : {
                           "type" : "constant",
                           "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "<p class=\"text-info\">No Flujo:</p> {{flujo.persistenceId}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
                         }
                       },
-                      "reference" : "7af98714-6aeb-47f8-b5be-5a0c6a548673",
+                      "reference" : "70f46b20-2ae0-456b-99e0-7136deab6d91",
                       "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
+                      "id" : "pbText"
                     }
                   ],
                   [
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 6
+                        "xs" : 12
                       },
                       "propertyValues" : {
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : ""
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "2eb7ee6b-15b7-4bb2-b1df-89174e2d7cde",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 5
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "bg-info"
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -256,14 +330,40 @@
                       "id" : "pbText"
                     },
                     {
-                      "type" : "component",
+                      "type" : "container",
                       "dimension" : {
-                        "xs" : 6
+                        "xs" : 2
                       },
                       "propertyValues" : {
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "dbf06168-634a-434f-bca1-6fbcd61b2335",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [ ]
+                      ]
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 5
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "bg-info"
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -410,7 +510,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<div class=\"alert alert-info\" translate><i class=\"\tglyphicon glyphicon-edit\" ></i>  A continuación puede modificar la información obtenida del medio de transporte. </div>"
+                          "value" : "<div class=\"alert alert-info\" translate><i class=\"\tglyphicon glyphicon-edit\" ></i>   A continuación puede modificar la información obtenida del medio de transporte. </div>"
                         },
                         "alignment" : {
                           "type" : "constant",

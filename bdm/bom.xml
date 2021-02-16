@@ -268,14 +268,7 @@ SE ALMACENARA UN REGISTRO POR FLUJO</description>
 "S" - SI&#13;
 "N" - NO</description>
                 </field>
-                <field type="STRING" length="1" name="tipo_documento" nullable="false" collection="false">
-                    <description>TIPO DEL DOCUMENTO PERSONAL DEL MOTORISTA:&#13;
-&#13;
-"0" - NO DEFINIDO&#13;
-"1" - PASAPORTE&#13;
-"2" - DOCUMENTO DE IDENTIDAD PERSONAL DEL PAIS&#13;
-"3" - OTRO</description>
-                </field>
+                <relationField type="AGGREGATION" reference="com.company.model.TipoDocViaje" fetchType="LAZY" name="tipo_documento" nullable="true" collection="false"/>
                 <field type="STRING" length="100" name="no_doc_motorista" nullable="true" collection="false">
                     <description>NUMERO DE DOCUMENTO PERSONAL DEL MOTORISTA</description>
                 </field>
@@ -836,7 +829,10 @@ SE ALMACENARA UN REGISTRO POR FLUJO</description>
                 <field type="STRING" length="255" name="message" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="condicion_placa" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="condicion_transportista" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="nombre_transportista" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre1_transportista" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre2_transportista" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="apellido1_transportista" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="apellido2_transportista" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="tipo_documento_transportista" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="nacionalidad_transportista" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="resultado" nullable="true" collection="false"/>
@@ -1018,7 +1014,7 @@ T= DUCAT&#13;</description>
                 <field type="STRING" length="255" name="ope_nam" nullable="true" collection="false">
                     <description>OPERACION QUE SE EJECUTO EN EL DOCUMENTO</description>
                 </field>
-                <field type="INTEGER" length="255" name="mrg_dsc" nullable="true" collection="false">
+                <field type="STRING" length="255" name="mrg_dsc" nullable="true" collection="false">
                     <description>TIPO DE COMERCIO&#13;
 1-IMPORTACION&#13;
 2-EXPORTACION&#13;
@@ -1114,6 +1110,7 @@ documentos incompletos)&#13;
                 <field type="LOCALDATETIME" length="255" name="fecha_registro" nullable="true" collection="false">
                     <description>FECHA Y HORA EN LA QUE SE INSERTA EL REGISTRO EN LA TABLA </description>
                 </field>
+                <field type="STRING" length="255" name="tipo" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -1148,12 +1145,31 @@ Se almacena el log de lo que se recibe en procesarducas</description>
                     <description>CODIGO DE PAIS DE PROCEDENCIA O DESTINO DEL MEDIO DE TRANSPORTE AL MOMENTO DE INGRESAR O SALIR DEL RECINTO ADUANERO.&#13;
 </description>
                 </field>
+                <field type="STRING" length="5" name="mot_cty_cod" nullable="true" collection="false"/>
+                <field type="STRING" length="35" name="mot_cty_nam" nullable="true" collection="false"/>
+                <field type="STRING" length="50" name="bar_ide" nullable="true" collection="false"/>
                 <field type="STRING" length="1" name="tipo" nullable="true" collection="false">
                     <description>si se llena por consultar duca o procesar duca</description>
                 </field>
                 <field type="LOCALDATETIME" length="255" name="fecha_registro" nullable="true" collection="false">
                     <description>FECHA EN LA QUE SE INSERTO EL REGISTRO EN LA BASE DE DATOS</description>
                 </field>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.RestPermistList">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.Flujo" fetchType="LAZY" name="id_flujo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="codigo_caso" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="itm_nbr" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="lst_cod" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="hsc_cod" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="gds_dsc" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="per_nbr" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="per_sta" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fecha_registro" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -1199,6 +1215,21 @@ U OTROS</description>
                     </fieldNames>
                 </uniqueConstraint>
             </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.TipoDocViaje">
+            <description>documentos de viaje válidos terrestre</description>
+            <fields>
+                <field type="STRING" length="255" name="codigo_documento" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre_documento" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado_registro" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fecha_adicion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="usuario_adicion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="usuario_modificacion" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fecha_modificacion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
             <queries/>
             <indexes/>
         </businessObject>

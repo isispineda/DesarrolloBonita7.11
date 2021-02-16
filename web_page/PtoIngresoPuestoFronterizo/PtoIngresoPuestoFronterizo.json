@@ -2,7 +2,7 @@
   "designerVersion" : "1.11.52",
   "id" : "PtoIngresoPuestoFronterizo",
   "name" : "PtoIngresoPuestoFronterizo",
-  "lastUpdate" : 1607551204210,
+  "lastUpdate" : 1612905380498,
   "rows" : [
     [
       {
@@ -814,7 +814,70 @@
                           {
                             "type" : "component",
                             "dimension" : {
-                              "xs" : 2
+                              "xs" : 4
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Pais de Placa"
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              },
+                              "placeholder" : {
+                                "type" : "interpolation",
+                                "value" : "Select an option"
+                              },
+                              "availableValues" : {
+                                "type" : "expression",
+                                "value" : "PaisPlaca_query"
+                              },
+                              "displayedKey" : {
+                                "type" : "constant",
+                                "value" : "nombre_pais"
+                              },
+                              "returnedKey" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "formInput.flujoInput.placa_pais"
+                              }
+                            },
+                            "reference" : "99277291-76ce-4586-9866-562f4d3bf556",
+                            "hasValidationError" : false,
+                            "id" : "pbSelect"
+                          },
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 4
                             },
                             "propertyValues" : {
                               "labelHidden" : {
@@ -858,7 +921,7 @@
                           {
                             "type" : "component",
                             "dimension" : {
-                              "xs" : 6
+                              "xs" : 4
                             },
                             "propertyValues" : {
                               "labelHidden" : {
@@ -897,63 +960,6 @@
                             "reference" : "72750688-c36b-45c8-836a-dd1ba4008348",
                             "hasValidationError" : false,
                             "id" : "pbCheckbox",
-                            "description" : ""
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "xs" : 12
-                            },
-                            "propertyValues" : {
-                              "allowHTML" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "allowHtml" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "hidden" : {
-                                "type" : "expression",
-                                "value" : "!formOutput._submitError.message"
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : "alert alert-danger col-lg-6 col-lg-offset-3"
-                              },
-                              "label" : {
-                                "type" : "interpolation"
-                              },
-                              "text" : {
-                                "type" : "interpolation",
-                                "value" : "<strong>Error</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
-                              },
-                              "alignment" : {
-                                "type" : "constant",
-                                "value" : "left"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
-                              },
-                              "labelPosition" : {
-                                "type" : "constant",
-                                "value" : "top"
-                              },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 4
-                              }
-                            },
-                            "reference" : "ecb60ca2-5c02-4416-80d3-e3c6d345d88f",
-                            "hasValidationError" : false,
-                            "id" : "pbText",
                             "description" : ""
                           }
                         ],
@@ -1049,6 +1055,63 @@
                             "reference" : "0b0aad18-4a9b-4645-9c37-a340d0bd769d",
                             "hasValidationError" : false,
                             "id" : "customWidgetButton"
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12
+                            },
+                            "propertyValues" : {
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "allowHtml" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "hidden" : {
+                                "type" : "expression",
+                                "value" : "!formOutput._submitError.message"
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : "alert alert-danger col-lg-6 col-lg-offset-3"
+                              },
+                              "label" : {
+                                "type" : "interpolation"
+                              },
+                              "text" : {
+                                "type" : "interpolation",
+                                "value" : "<strong>Error</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                              },
+                              "alignment" : {
+                                "type" : "constant",
+                                "value" : "left"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              }
+                            },
+                            "reference" : "ecb60ca2-5c02-4416-80d3-e3c6d345d88f",
+                            "hasValidationError" : false,
+                            "id" : "pbText",
+                            "description" : ""
                           }
                         ]
                       ]
@@ -1172,8 +1235,7 @@
         "      \"persistenceId_string\" : \"\"\r",
         "    },\r",
         "    \"vacio\" : false,\r",
-        "    \"tipo_documento\" : \"\",\r",
-        "    \"parqueo\" : false,\r",
+        "     \"parqueo\" : false,\r",
         "    \"tipo_finalizacion\" : \"P\",\r",
         "    \"salida_lista\" : \"N\",\r",
         "    \"inicio_salida\" : \"N\",\r",
@@ -1348,6 +1410,13 @@
       "type" : "expression",
       "value" : [
         "return \"hello\";"
+      ],
+      "exposed" : false
+    },
+    "PaisPlaca_query" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/com.company.model.Pais?q=find&p=0&c=99"
       ],
       "exposed" : false
     }
