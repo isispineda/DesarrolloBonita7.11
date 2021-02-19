@@ -2,7 +2,7 @@
   "designerVersion" : "1.11.52",
   "id" : "PtFinalizacionIngreso",
   "name" : "PtFinalizacionIngreso",
-  "lastUpdate" : 1610477687974,
+  "lastUpdate" : 1613767880165,
   "rows" : [
     [
       {
@@ -36,7 +36,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "COMPLETAR ENTRADA DESDE EL SALVADOR"
+                  "value" : "COMPLETAR ENTRADA DESDE EL SALVADOR PARA LA PLACA: {{flujo.placa}}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -90,12 +90,73 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "5fdea267-2d57-4615-ac1c-2f75c143f105",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "No Flujo"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{flujo.persistenceId}}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "a4c25866-fb57-4445-acd4-ecf7d78efd5a",
+              "hasValidationError" : false,
+              "id" : "pbText"
             }
           ]
         ]
@@ -107,7 +168,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "6b5d341d-f5a9-4a83-be42-4204de8d8ca7",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -157,55 +227,6 @@
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "No Flujo"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "{{flujo.persistenceId}}"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  }
-                },
-                "reference" : "a4c25866-fb57-4445-acd4-ecf7d78efd5a",
-                "hasValidationError" : false,
-                "id" : "pbText"
               }
             ],
             [
@@ -406,7 +427,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -431,7 +452,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{flujo.fecha_inicio|uiDate}}"
+                          "value" : "{{flujo.fecha_inicio|uiDate:'dd/MM/yyyy'}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -447,7 +468,7 @@
                         },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 4
+                          "value" : 6
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -462,7 +483,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -503,7 +524,7 @@
                         },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 4
+                          "value" : 6
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -518,63 +539,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!flujo.observacion_flujo"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Observacion Flujo"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{flujo.observacion_flujo}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "fffd23ad-fff8-44fc-970c-2188d6e2d1b9",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    },
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -615,7 +580,7 @@
                         },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 4
+                          "value" : 6
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -623,6 +588,64 @@
                         }
                       },
                       "reference" : "b980c63d-7b7d-4d59-b5b4-7f1bec090b99",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!flujo.observacion_flujo"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Observacion Flujo"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{flujo.observacion_flujo}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 6
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "fffd23ad-fff8-44fc-970c-2188d6e2d1b9",
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
@@ -681,7 +704,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -737,7 +760,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -793,7 +816,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -845,11 +868,13 @@
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
-                    },
+                    }
+                  ],
+                  [
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -901,13 +926,11 @@
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
-                    }
-                  ],
-                  [
+                    },
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -963,7 +986,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -1015,7 +1038,9 @@
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
-                    },
+                    }
+                  ],
+                  [
                     {
                       "type" : "component",
                       "dimension" : {
@@ -1114,7 +1139,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -1170,7 +1195,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -1226,7 +1251,7 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -1278,11 +1303,183 @@
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 4
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!flujo.fecha_venc_doc_motorista"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Fecha de Vencimiento Documento"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{flujo.fecha_venc_doc_motorista|uiDate:'dd/MM/yyyy'}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 6
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "f2ff708d-57c9-4e14-9590-1bcb07e2a955",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
                     },
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!flujo.fecha_nac_motorista"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Fecha de Nacimiento"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{flujo.fecha_nac_motorista|uiDate:'dd/MM/yyyy'}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 6
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "ac00d539-11c0-4a09-b757-069a9dc7e0bf",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 4
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!flujo.tipo_documento"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Tipo de Documento"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{flujo.tipo_documento}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 6
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "78d29ed3-ccd3-4b21-a8b1-c33dfc431b2d",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "allowHtml" : {
@@ -1334,181 +1531,11 @@
                       "hasValidationError" : false,
                       "id" : "pbText",
                       "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 3
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!flujo.fecha_venc_doc_motorista"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Fecha de Vencimiento Documento"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{flujo.fecha_venc_doc_motorista|uiDate}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "f2ff708d-57c9-4e14-9590-1bcb07e2a955",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
                     },
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 3
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!flujo.fecha_nac_motorista"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Fecha de Nacimiento"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{flujo.fecha_nac_motorista|uiDate}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "ac00d539-11c0-4a09-b757-069a9dc7e0bf",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    },
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 3
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!flujo.tipo_documento"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Tipo de Documento"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{flujo.tipo_documento}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        }
-                      },
-                      "reference" : "78d29ed3-ccd3-4b21-a8b1-c33dfc431b2d",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    },
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 3
+                        "xs" : 4
                       },
                       "propertyValues" : {
                         "labelHidden" : {

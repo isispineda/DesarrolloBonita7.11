@@ -2,7 +2,7 @@
   "designerVersion" : "1.11.52",
   "id" : "newConfirmacionDatos",
   "name" : "newConfirmacionDatos",
-  "lastUpdate" : 1610477401189,
+  "lastUpdate" : 1613750564612,
   "rows" : [
     [
       {
@@ -49,7 +49,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "CONFIRMACION DE INFORMACION DEL MEDIO DE TRANSPORTE"
+                  "value" : "CONFIRMACION DE INFORMACION DEL MEDIO DE TRANSPORTE: {{flujo.placa}}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -200,11 +200,11 @@
                         },
                         "labelHidden" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Default label"
+                          "value" : "No Flujo:"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -220,7 +220,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<p class=\"text-info\">No Flujo:</p> {{flujo.persistenceId}}"
+                          "value" : "{{flujo.persistenceId}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -582,7 +582,7 @@
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : 100
+                          "value" : 17
                         },
                         "min" : {
                           "type" : "constant"
@@ -659,7 +659,7 @@
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : 100
+                          "value" : 17
                         },
                         "min" : {
                           "type" : "constant"

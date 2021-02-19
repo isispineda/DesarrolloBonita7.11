@@ -2,7 +2,7 @@
   "designerVersion" : "1.11.52",
   "id" : "IngresoDocumentos",
   "name" : "IngresoDocumentos",
-  "lastUpdate" : 1613148918183,
+  "lastUpdate" : 1613766647298,
   "rows" : [
     [
       {
@@ -45,7 +45,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "DOCUMENTOS A PROCESAR"
+                  "value" : "DOCUMENTOS A PROCESAR  PARA LA PLACA: {{flujo.placa}}"
                 },
                 "level" : {
                   "type" : "constant",
@@ -116,6 +116,55 @@
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "No Flujo:"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{flujo.persistenceId}}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "916558fb-4a2e-46b5-a097-f523b9bebd62",
+              "hasValidationError" : false,
+              "id" : "pbText"
             }
           ]
         ]
@@ -417,7 +466,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -444,11 +493,11 @@
                         },
                         "minLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 3
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 17
                         },
                         "min" : {
                           "type" : "constant"
@@ -494,7 +543,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -521,11 +570,11 @@
                         },
                         "minLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 3
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 17
                         },
                         "min" : {
                           "type" : "constant"
@@ -811,7 +860,7 @@
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 4
                         },
                         "min" : {
                           "type" : "constant"
@@ -1093,7 +1142,7 @@
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 1
                         },
                         "min" : {
                           "type" : "constant"
@@ -1247,7 +1296,7 @@
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 30
                         },
                         "min" : {
                           "type" : "constant"
@@ -3134,6 +3183,13 @@
       "type" : "url",
       "value" : [
         "../API/bdm/businessData/com.company.model.Frontera?q=find&p=0&c=99"
+      ],
+      "exposed" : false
+    },
+    "flujo" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.flujo_ref.link}}"
       ],
       "exposed" : false
     }

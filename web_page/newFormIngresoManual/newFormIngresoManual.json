@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.10.50",
   "id" : "newFormIngresoManual",
   "name" : "newFormIngresoManual",
-  "lastUpdate" : 1601833755857,
+  "lastUpdate" : 1613754148866,
   "rows" : [
     [
       {
@@ -81,6 +81,74 @@
               "reference" : "525e6d64-6558-43e6-9e6b-4e792fc7108b",
               "hasValidationError" : false,
               "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "allowHtml" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbText"
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayDescription }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                }
+              },
+              "reference" : "ccc63116-a424-4511-ac72-ef1fd36ea5a3",
+              "hasValidationError" : false,
+              "id" : "pbText"
             }
           ],
           [
@@ -177,72 +245,6 @@
                 }
               },
               "reference" : "3341e774-b4e8-4aae-a574-9675dc1ac15a",
-              "hasValidationError" : false,
-              "id" : "pbText"
-            },
-            {
-              "type" : "component",
-              "dimension" : {
-                "xs" : 4
-              },
-              "propertyValues" : {
-                "allowHtml" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "labelHidden" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "widgetId" : {
-                  "type" : "constant",
-                  "value" : "pbText"
-                },
-                "readOnly" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "label" : {
-                  "type" : "interpolation"
-                },
-                "text" : {
-                  "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
-                },
-                "alignment" : {
-                  "type" : "constant",
-                  "value" : "left"
-                },
-                "class" : {
-                  "type" : "constant",
-                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
-                },
-                "dimension" : {
-                  "type" : "constant",
-                  "value" : 12
-                },
-                "labelPosition" : {
-                  "type" : "constant",
-                  "value" : "top"
-                },
-                "labelWidth" : {
-                  "type" : "constant",
-                  "value" : 4
-                },
-                "allowHTML" : {
-                  "type" : "constant",
-                  "value" : true
-                }
-              },
-              "reference" : "ccc63116-a424-4511-ac72-ef1fd36ea5a3",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -446,11 +448,11 @@
                         },
                         "minLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 3
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : 100
+                          "value" : 17
                         },
                         "min" : {
                           "type" : "constant"
@@ -535,11 +537,11 @@
                         },
                         "minLength" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 3
                         },
                         "maxLength" : {
                           "type" : "constant",
-                          "value" : 100
+                          "value" : 17
                         },
                         "min" : {
                           "type" : "constant"
